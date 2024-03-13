@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Manager</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+  <div class="form-group">
+    <h1>Expense Tracker</h1>
+    <label for="amount">Choose Expense Amount:</label>
+    <input type="number" id="amount" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="description">Choose Description:</label>
+    <input type="text" id="description" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="category">Choose Category:</label>
+    <select name="category" id="category" class="form-control" required>
+      <option value="fuel">Fuel</option>
+      <option value="movie">Movie</option>
+      <option value="shopping">Shopping</option>
+    </select>
+  </div>
+  <input type="hidden" id="editExpenseId">
+  <button class="btn btn-primary mb-3" onclick="addExpense()">Add Expense</button>
+  <h3>Expense List</h3>
+  <hr class="my-4" style="border-color: #806e6e;">
+  <div id="expenseList"></div>
+<script src="script.js"></script>
+</body>
+</html>
